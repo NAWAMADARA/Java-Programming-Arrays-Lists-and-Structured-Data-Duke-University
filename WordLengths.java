@@ -46,4 +46,21 @@ storing these counts in the array counts.
         int [] counts = new int[31];
         countWordLenghts(resource, counts);
     }
+    /*
+    Write a method indexOfMax that has one parameter named values that is an integer array.
+    This method returns the index position of the largest element in values.
+     */
+    public int indexOfMax(int values[]){
+        int temporary = 0;
+        for (int j = 0; j< values.length; j++){
+            for (int k = j + 1; k<j; k++){
+                if (values[j] > values[k]){
+                    temporary = values[j];
+                    values[j] = values[k];
+                    values[k] = temporary;
+                }
+            }
+        }
+        return values[values.length];
+    }
 }
