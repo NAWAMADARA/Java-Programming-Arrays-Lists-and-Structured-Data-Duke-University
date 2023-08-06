@@ -1,3 +1,4 @@
+package wordPlay;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
@@ -33,5 +34,16 @@ storing these counts in the array counts.
             else finalLength = totalLength;
             counts[finalLength] += 1;
         }
+    }
+    /*
+    Write a void method testCountWordLengths that creates a FileResource so you can select a file,
+    and creates a counts integer array of size 31.
+    This method should call countWordLengths with a file and then print the number of words of each length.
+     */
+    public void testCountWordLengths(String resource) throws FileNotFoundException {
+        File file = new File(resource);
+        Scanner sc = new Scanner(file);
+        int [] counts = new int[31];
+        countWordLenghts(resource, counts);
     }
 }
