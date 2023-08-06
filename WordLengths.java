@@ -61,6 +61,6 @@ storing these counts in the array counts.
                 }
             }
         }
-        return values[values.length];
+        return values[values.length-1];
     }
 }
