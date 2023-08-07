@@ -96,4 +96,5 @@ public class CaesarCipher {
         }
         return encrypted.toString();
     }
+
 }
