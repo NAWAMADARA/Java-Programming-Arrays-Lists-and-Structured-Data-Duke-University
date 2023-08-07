@@ -1,7 +1,11 @@
 package wordPlay;
 
 public class CaeserBreaker {
-
+/*
+Complete the decryption method shown in the lesson by creating a CaesarBreaker class with the methods countLetters, maxIndex, and decrypt.
+Recall that the decrypt method creates a CaesarCipher object in order to use the encrypt method you wrote for the last lesson.
+Make sure that your CaesarCipher class is in the same folder as CaesarBreaker!
+ */
 public int[] countLetters(String message){
     String alphabets = "abcdefghijklmnopqrstuvwxyz";
     int arr[] = new int[26];
