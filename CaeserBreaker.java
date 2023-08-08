@@ -74,6 +74,9 @@ public class CaeserBreaker {
         if (dkey < 0) dkey = 26 - (4 - key);
         return dkey;
     }
+    public String decryptTwoKeys(String encrypted){
+        return "";
+    }
 }
 
 
