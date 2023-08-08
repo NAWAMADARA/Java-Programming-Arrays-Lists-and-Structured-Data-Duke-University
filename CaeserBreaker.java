@@ -74,6 +74,11 @@ public class CaeserBreaker {
         if (dkey < 0) dkey = 26 - (4 - key);
         return dkey;
     }
+    /*
+    Write the method decryptTwoKeys in the CaesarBreaker class that has one parameter,
+    a String parameter named encrypted that represents a String that was encrypted with the two key algorithm discussed in the previous lesson.
+    This method attempts to determine the two keys used to encrypt the message, prints the two keys, and then returns the decrypted String with those two keys.
+     */
     public String decryptTwoKeys(String encrypted){
         String everyOtherString1 = halfOfString(encrypted, 0);
         String everyOtherString2 = halfOfString(encrypted, 1);
