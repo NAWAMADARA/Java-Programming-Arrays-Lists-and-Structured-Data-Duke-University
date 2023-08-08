@@ -66,7 +66,7 @@ public class CaesarCipher {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String shiftedAlphabet = alphabet.substring(key1) + alphabet.substring(0, key1);
         String shiftedAlphabet2 = alphabet.substring(key2) + alphabet.substring(0, key2);
-        for (int i = 0; i<encrypted.length(); i++ ){
+        for (int i = 0; i<encrypted.length(); i+=2 ){
             char currentChar = encrypted.charAt(i);
             int index = alphabet.indexOf(Character.toUpperCase(currentChar));
             if(index != -1){
@@ -76,13 +76,9 @@ public class CaesarCipher {
                 }else{
                     encrypted.setCharAt(i, Character.toLowerCase(newChar));
                 }
-                i++;
             }
-        }for (int k = 1; k<encrypted.length(); k++ ){
+        }for (int k = 1; k<encrypted.length(); k+=2 ){
             char currentChar = encrypted.charAt(k);
-            if (currentChar == ' '){
-                k+=1;
-            }
             int index = alphabet.indexOf(Character.toUpperCase(currentChar));
             if(index != -1){
                 char newChar = shiftedAlphabet2.charAt(index);
@@ -91,7 +87,7 @@ public class CaesarCipher {
                 }else{
                     encrypted.setCharAt(k, Character.toLowerCase(newChar));
                 }
-                k++;
+
             }
         }
         return encrypted.toString();

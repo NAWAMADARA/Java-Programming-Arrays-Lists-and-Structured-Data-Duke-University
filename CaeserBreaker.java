@@ -75,6 +75,11 @@ public class CaeserBreaker {
         return dkey;
     }
     public String decryptTwoKeys(String encrypted){
+        String everyOtherString1 = halfOfString(encrypted, 0);
+        String everyOtherString2 = halfOfString(encrypted, 1);
+        int key1 = getKey(everyOtherString1);
+        int key2 = getKey(everyOtherString2);
+        System.out.println("The two keys found are: " + key1 + "and " + key2);
         return "";
     }
 }
