@@ -2,6 +2,7 @@ package wordPlay;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WordLengths {
@@ -34,6 +35,7 @@ storing these counts in the array counts.
             else finalLength = totalLength;
             counts[finalLength] += 1;
         }
+        System.out.println(Arrays.toString(counts));
     }
     /*
     Write a void method testCountWordLengths that creates a FileResource so you can select a file,
@@ -50,17 +52,17 @@ storing these counts in the array counts.
     Write a method indexOfMax that has one parameter named values that is an integer array.
     This method returns the index position of the largest element in values.
      */
-    public int indexOfMax(int values[]){
-        int temporary = 0;
-        for (int j = 0; j< values.length; j++){
-            for (int k = j + 1; k<j; k++){
-                if (values[j] > values[k]){
-                    temporary = values[j];
-                    values[j] = values[k];
-                    values[k] = temporary;
-                }
-            }
+    public static int indexOfMax(int values[])
+    {
+        int largest = values[0];
+
+        for(int i = 0; i < values.length; i++)
+        {
+            if(values[i] > largest)
+                largest = values[i];
         }
-        return values[values.length-1];
+
+        return largest;
     }
+
 }

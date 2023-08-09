@@ -1,5 +1,7 @@
 package wordPlay;
 
+import javax.print.DocFlavor;
+
 public class CaeserBreaker {
     /*
     Complete the decryption method shown in the lesson by creating a CaesarBreaker class with the methods countLetters, maxIndex, and decrypt.
@@ -82,10 +84,36 @@ public class CaeserBreaker {
     public String decryptTwoKeys(String encrypted){
         String everyOtherString1 = halfOfString(encrypted, 0);
         String everyOtherString2 = halfOfString(encrypted, 1);
+
         int key1 = getKey(everyOtherString1);
         int key2 = getKey(everyOtherString2);
-        System.out.println("The two keys found are: " + key1 + "and " + key2);
-        return "";
+
+        System.out.println("The two keys found are: " + key1 + " and " + key2);
+
+        String decrypted1 = decrypt(everyOtherString1, key1);
+        String decrypted2 = decrypt(everyOtherString2, key2);
+
+        int len1 = everyOtherString1.length();
+        int len2 = everyOtherString2.length();
+
+        StringBuilder sb = new StringBuilder();
+
+        int n1 = 0;
+        int n2 = 0;
+
+        for (int k = 0; k<len1+len2; k++){
+            if (k % 2 == 0){
+                sb = sb.append(decrypted1.charAt(n1));
+                n1 = n1+ 1;
+                //System.out.println("a = " + a);
+            }
+            if (k % 2 != 0){
+                sb = sb.append(decrypted2.charAt(n2));
+                n2 += 1;
+                //System.out.println("b = " + b);
+            }
+        }
+        return sb.toString();
     }
 }
 
