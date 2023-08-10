@@ -49,8 +49,7 @@ public class CaesarCipher {
                 }
 
             }
-        }
-        return encrypted.toString();
+        }return encrypted.toString();
     }
 
     /*
@@ -59,7 +58,7 @@ public class CaesarCipher {
     Parameter key1 is used to encrypt every other character with the Caesar Cipher algorithm, starting with the first character,
     and key2 is used to encrypt every other character, starting with the second character.
     For example, the call encryptTwoKeys(“First Legion”, 23, 17) should return “Czojq Ivdzle”.
-    Note the ‘F’ is encrypted with key 23, the first ‘i’ with 17, the ‘r’ with 23, and the ‘s’ with 17, etc.
+    Note the ‘ F’ is encrypted with key 23, the first ‘i’ with 17, the ‘r’ with 23, and the ‘s’ with 17, etc.
      */
     public String encryptTwoKeys(String input, int key1, int key2){
         StringBuilder encrypted = new StringBuilder(input);
