@@ -20,6 +20,7 @@ private ArrayList<Integer> myFreqs;
 /*
 Write a constructor WordFrequencies, and initialize the private variables.
  */
+
 public WordFrequencies(){
     myWords = new ArrayList<String>();
     myFreqs = new ArrayList<Integer>();
