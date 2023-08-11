@@ -16,10 +16,9 @@ public WordFrequencies(){
     myFreqs = new ArrayList<Integer>();
 }
 
-public void findUnique() throws FileNotFoundException {
+public void findUnique(String resource) throws FileNotFoundException {
     myWords.clear();
     myFreqs.clear();
-    String resource = "";
     File file = new File(resource);
     Scanner sc = new Scanner(file);
     while (sc.hasNext()){
@@ -36,7 +35,11 @@ public void findUnique() throws FileNotFoundException {
     }
 }
 
-public int indexOfMax(){
+public void tester() throws FileNotFoundException {
+    findUnique("C:/Users/Lenovo/OneDrive/Desktop/notetest.txt/");
+}
+
+public int findIndexOfMax(){
     Integer valueOfMax = Collections.max(myFreqs);
     Integer indexOfValueOfMax = myFreqs.indexOf(valueOfMax);
     return indexOfValueOfMax;
